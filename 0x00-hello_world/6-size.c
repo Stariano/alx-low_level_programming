@@ -1,6 +1,7 @@
 #include <stdio.h>
-/* This function will print various types of variables with their amounted size in memory */
+
 int main(void)
+	/* This function will print various types of variables with their amounted size in memory */
 {
 printf("Size of a char: %lu byte(s)\n", sizeof(char));
 printf("Size of an int: %lu byte(s) \n", sizeof(int));
