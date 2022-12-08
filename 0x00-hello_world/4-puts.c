@@ -1,7 +1,13 @@
 #include <stdio.h>
 
+/**
+ * main - Entry point
+ * Description: prints "\"Programming is like building a multilingual puzzle"
+ * Return: 0
+ */
+
+
 int main(void)
-	/* This function will print using puts command*/
 {
 puts("\"Programming is like building a multilingual puzzle");
 return (0);
