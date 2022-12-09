@@ -10,14 +10,15 @@
 
 int main(void)
 {
-for (int x='A'; x <= 'Z'; x++)
+int x;
+for (x = 'a'; x <= 'z'; x++)
 {
-if (x == 'Q' || x == 'E')
+if (x == 'q' || x == 'e')
 {
 continue;
 }
-char small = tolower(x);
-putchar(small);
+putchar(x);
 }
+putchar('\n');
 return (0);
 }
