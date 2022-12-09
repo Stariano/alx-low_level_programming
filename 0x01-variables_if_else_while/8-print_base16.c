@@ -12,10 +12,10 @@ int mai(void)
 
 int x,m;
 
-for (x = 0, x < 10, x++)
+for (x = 0; x < 10; x++)
 putchar(x);
 
-for (m = 'a', x < 'g', m++)
+for (m = 'a'; x < 'g'; m++)
 putchar(m);
 
 putchar('\n');
