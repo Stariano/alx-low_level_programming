@@ -10,13 +10,12 @@
 
 int main(void)
 {
-int x;
+int x, mm;
 for (x='a'; x <= 'z'; x++)
 {
 putchar(x);
 }
 
-int mm;
 for (mm='A'; mm <= 'Z'; mm++)
 {
 putchar(mm);
