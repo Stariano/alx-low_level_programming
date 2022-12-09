@@ -15,9 +15,11 @@ for (x='a'; x <= 'z'; x++)
 {
 putchar(x);
 }
-for (int x='A'; x <= 'Z'; x++)
+
+int z;
+for (int z='A'; z <= 'Z'; z++)
 {
-putchar(x);
+putchar(z);
 }
 putchar('\n');
 return (0);
