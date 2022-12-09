@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 /**
  * main - Prints all the numbers of base 16 in lowercase
