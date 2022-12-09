@@ -7,15 +7,12 @@
  *
  *Return: Always 0 (success)
  */
-
 int main(void)
 {
-int reverse = 0;
-for (int x = 'Z'; x > 'A'; x--){
-char small = tolower(x);
+int x;
+for (x = 'z'; x > 'a'; x--)
+putchar(x);
 
-putchar(small);
-}
 putchar('\n');
 return (0);
 }
