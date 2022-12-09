@@ -16,7 +16,7 @@ x = 0;
 while (x <= 9)
 {
 putchar((x % 10) + '0');
-if(x < 9)
+if (x < 9)
 {
 putchar(',');
 putchar(' ');
