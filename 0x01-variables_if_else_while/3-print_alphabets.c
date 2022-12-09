@@ -16,10 +16,10 @@ for (x='a'; x <= 'z'; x++)
 putchar(x);
 }
 
-int z;
-for (int z='A'; z <= 'Z'; z++)
+int mm;
+for (mm='A'; mm <= 'Z'; mm++)
 {
-putchar(z);
+putchar(mm);
 }
 putchar('\n');
 return (0);
