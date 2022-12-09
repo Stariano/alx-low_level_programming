@@ -19,8 +19,8 @@ putchar((x % 10) + '0');
 if(x < 9)
 {
 putchar(',');
-}
 putchar(' ');
+}
 x++;
 }
 putchar('\n');
