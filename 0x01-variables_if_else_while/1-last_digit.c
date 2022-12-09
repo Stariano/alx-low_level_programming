@@ -3,8 +3,7 @@
 #include <time.h>
 
 /**
- * main - Assign a random variable with conditional if and get the last digit and do the calcaultions
- *
+ * main - Assign a random variable with conditional if and get the last digit*
  *Return: Always 0 (success)
  */
 
