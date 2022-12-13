@@ -12,7 +12,7 @@ int aa, num;
 
 num = 0;
 
-while (num <= 10)
+while (num < 10)
 {
 for (aa = 'a'; aa <= 'z'; aa++)
 {
