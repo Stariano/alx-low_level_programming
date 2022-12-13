@@ -3,10 +3,9 @@
 /**
  * jack_bauer - function that prints every minute of the day, 24 hour clock
  */
- 
 void jack_bauer(void)
 {
-int digit1, digit2,digit3,digit4;
+int digit1, digit2, digit3, digit4;
 
 for (digit1 = 0; digit1 <= 2; digit1++)
 {
