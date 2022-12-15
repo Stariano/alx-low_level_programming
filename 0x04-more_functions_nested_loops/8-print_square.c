@@ -7,17 +7,20 @@
 
 void print_square(int size)
 {
-int prnt, hw, columnlevel;
-if (size <= 0)
-putcharr('\n');
-else
-for (prnt = 0; prnt < size; prnt++)
-{
-for (hw = 0 ; hw < size; hw++)
-{
-putcharr('#');
+	int prnt, hw, columnlevel;
+	if (size <= 0)
+	{
+		putcharr('\n');
+	}
+	else
+	{
+		for (prnt = 0; prnt < size; prnt++)
+		{
+			for (hw = 0 ; hw < size; hw++)
+			{
+				putcharr('#');
+			}
+			putcharr('\n');
+		}
+	}
 }
-putcharr('\n');
-}
-}
-
