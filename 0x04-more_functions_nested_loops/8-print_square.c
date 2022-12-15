@@ -7,14 +7,14 @@
 
 void print_square(int size)
 {
-	int prnt, hw;
-
+	int prnt, hw, columnlevel;
+	columnlevel = size - 1;
 	if (size <= 0)
 		_putchar('\n');
 	else
 		for (prnt = 0; prnt < size; prnt++)
 		{
-			for(hw = prnt - 1; hw < size; hw++)
+			for(hw = prnt - 1; hw < columnlevel; hw++)
 			{
 				_putchar('#');
 				_putchar('\n');
