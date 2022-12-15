@@ -10,8 +10,8 @@ void print_square(int size)
 	int prnt;
 
 	if (size <= 0)
-		_putchar('\n')
+		_putchar('\n');
 	else
 		for (prnt = 0; prnt <= size; prnt++)
-			_putchar('#')
+			_putchar('#');
 }
