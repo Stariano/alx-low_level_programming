@@ -12,7 +12,7 @@ void print_rev(char *s)
 int len = strlen(s);
 int i;
 
-if (s == " ")
+if (len <= 1)
 {
 	break;
 }
