@@ -16,6 +16,7 @@ void print_rev(char *s)
 	reversed = s;
 	for (i = 0; i < length; i++)
 	{
-		printf("%s", reversed[length-i-1] = s[i];
+		reversed[length-i-1] = s[i];
 	}
+	printf("%s", reversed);
 }
