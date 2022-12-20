@@ -27,4 +27,5 @@ void print_rev(char *s)
       s[i - j - 1] = temp[j];
     }
   }
+  printf("%s\n", s);
 }
