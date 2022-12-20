@@ -14,8 +14,10 @@ int i;
 
 if (s == " ")
 {
-break;
+	break;
+}
 else
+{
 for (i = len; i >= 0; i--)
 {
 _putchar(s[i]);
