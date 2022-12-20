@@ -14,13 +14,6 @@ int i;
 
 for (i = len; i >= 0; i--)
 {
-	if (len >= 1)
-	{
-		break;
-	}
-	else
-	{
 		_putchar(s[i]);
-	}
 }
 }
