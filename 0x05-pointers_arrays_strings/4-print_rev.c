@@ -9,5 +9,12 @@
  
 void print_rev(char *s)
 {
-	printf("%s", revstr(s));
+	int i;
+	long int length = strlen(s);
+	char *reversed;
+
+	for (i = 0; i < length; i++)
+	{
+		reversed[length-i-1] = s[i];
+	}
 }
