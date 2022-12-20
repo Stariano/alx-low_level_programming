@@ -14,7 +14,7 @@ int i;
 
 if (len <= 1)
 {
-	putchar(s);
+	_putchar(s);
 }
 else
 {
