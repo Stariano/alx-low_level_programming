@@ -12,15 +12,15 @@ void print_rev(char *s)
 int len = strlen(s);
 int i;
 
-if (len <= 1)
-{
-	_putchar(s);
-}
-else
-{
 for (i = len; i >= 0; i--)
 {
-_putchar(s[i]);
-}
+	if (len >= 1)
+	{
+		break;
+	}
+	else
+	{
+		_putchar(s[i]);
+	}
 }
 }
