@@ -1,50 +1,40 @@
 #include "main.h"
-#include <stdio.h>
-#include <string.h>
+
+#include "holberton.h"
 
 /**
- * cap_string - A function that capitalizes all words of a string.
- * @s : String
- * Return: String in upper case
+ * cap_string - Capitalizes all words of a string.
+ * @s: The string to be capitalized.
+ *
+ * Return: A pointer to the changed string.
  */
-
 char *cap_string(char *s)
+{
+	int index = 0;
+
+	while (str[index])
 	{
-	int i, length;
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
 
-	length = strlen(s);
+		if (str[index - 1] == ' ' ||
+		    str[index - 1] == '\t' ||
+		    str[index - 1] == '\n' ||
+		    str[index - 1] == ',' ||
+		    str[index - 1] == ';' ||
+		    str[index - 1] == '.' ||
+		    str[index - 1] == '!' ||
+		    str[index - 1] == '?' ||
+		    str[index - 1] == '"' ||
+		    str[index - 1] == '(' ||
+		    str[index - 1] == ')' ||
+		    str[index - 1] == '{' ||
+		    str[index - 1] == '}' ||
+		    index == 0)
+			str[index] -= 32;
 
-	for (i = 0; i < length; i++)
-	{
-		if (s[i] == '!')
-		{
-			++i;
-			if (s[i] == ' ')
-			++i;
-			if (s[i] >= 97 && s[i] <= 122)
-			{
-				s[i] = s[i] - 32;
-			}
-		}
-
-		if (s[i] == ' ' || s[i] == '.' || s[i] == '\t')
-		{
-			++i;
-			if (s[i] >= 97 && s[i] <= 122)
-			{
-				s[i] = s[i] - 32;
-			}
-
-		}
-		if (s[i] == '\n' || s[i] == '6' || s[i] == '!')
-		{
-			++i;
-			if (s[i] >= 97 && s[i] <= 122)
-			{
-				s[i] = s[i] - 32;
-			}
-		}
-
+		index++;
 	}
-	return (s);
+
+	return (str);
 }
