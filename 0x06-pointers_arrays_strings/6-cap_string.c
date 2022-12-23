@@ -9,26 +9,26 @@ char *cap_string(char *s)
 {
 	int index = 0;
 
-	while (str[index])
+	while (s[index])
 	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
+		while (!(s[index] >= 'a' && s[index] <= 'z'))
 			index++;
 
-		if (str[index - 1] == ' ' ||
-		    str[index - 1] == '\t' ||
-		    str[index - 1] == '\n' ||
-		    str[index - 1] == ',' ||
-		    str[index - 1] == ';' ||
-		    str[index - 1] == '.' ||
-		    str[index - 1] == '!' ||
-		    str[index - 1] == '?' ||
-		    str[index - 1] == '"' ||
-		    str[index - 1] == '(' ||
-		    str[index - 1] == ')' ||
-		    str[index - 1] == '{' ||
-		    str[index - 1] == '}' ||
+		if (s[index - 1] == ' ' ||
+		    s[index - 1] == '\t' ||
+		    s[index - 1] == '\n' ||
+		    s[index - 1] == ',' ||
+		    s[index - 1] == ';' ||
+		    s[index - 1] == '.' ||
+		    s[index - 1] == '!' ||
+		    s[index - 1] == '?' ||
+		    s[index - 1] == '"' ||
+		    s[index - 1] == '(' ||
+		    s[index - 1] == ')' ||
+		    s[index - 1] == '{' ||
+		    s[index - 1] == '}' ||
 		    index == 0)
-			str[index] -= 32;
+			s[index] -= 32;
 
 		index++;
 	}
