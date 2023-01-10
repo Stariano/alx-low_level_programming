@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /* 
  * Functions usig static lib
  * Return: 0
