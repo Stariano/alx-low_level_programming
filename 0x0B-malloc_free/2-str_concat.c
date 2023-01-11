@@ -14,6 +14,11 @@ char *str_concat(char *s1, char *s2)
 	int i, k, lentotal, len1;
 	char *strnew = NULL;
 
+	if (s1 == NULL)
+		s1 = "";
+	if(s2 == NULL)
+		s2 = "":
+
 	lentotal = strlen(s1) + strlen(s2);
 
 	strnew = malloc((lentotal + 1) * sizeof(char));
