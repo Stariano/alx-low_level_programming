@@ -10,15 +10,20 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	int i;
+	unsigned int i;
 	char *str;
 
-	str = malloc(size * sizeof(char));
+	str = malloc((size + 1) * sizeof(char));
+	
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 
 	for (i = 0; i < size; i++)
 	{
 		str[i] = c;
 	}
-
+	str[i] = '\0';
 	return (str);
 }
