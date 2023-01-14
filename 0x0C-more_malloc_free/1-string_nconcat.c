@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 /**
  * string_nconcat - function to concatnate strings with n bytes
@@ -11,37 +11,38 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int i, k, len1;
-	unsigned int lentotal;
-	char *strnew = NULL;
+	int count, count1;
+	int sign = n;
+	char *ptr;
+	int len1, len2;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
-	lentotal = strlen(s1) + n;
+	for (len1 = 0; s1[len1] != '\0'; len1++)
+		;
+	for (len2 = 0; s2[len2] != '\0'; len2++)
+		;
 
-	strnew = malloc((lentotal + 1) * sizeof(char));
-
-	if (strnew == NULL)
+	if (sign >= len2)
+	{
+		sign = len2;
+		ptr = malloc(sizeof(char) * (len1 + len2 + 1));
+	}
+	else
+		ptr = malloc(sizeof(char) * (len1 + n + 1));
+	if (ptr == NULL)
 		return (NULL);
-
-	len1 = strlen(s1);
-
-	for (i = 0; i < len1; i++)
+	for (count = 0; count < len1; count++)
 	{
-		strnew[i] = s1[i];
+		ptr[count] = s1[count];
 	}
-
-	k = 0;
-	for (; i < lentotal; i++)
+	for (count1 = 0; count1 < sign; count1++)
 	{
-		strnew[i] = s2[k];
-		k++;
+		ptr[count++] = s2[count1];
 	}
-	strnew[i] = '\0';
-
-	return (strnew);
+	ptr[count++] = '\0';
+	return (ptr);
 }
-
