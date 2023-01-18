@@ -1,18 +1,7 @@
 #include "dog.h"
 #include <stdlib.h>
-/**
- * _strlen - return the len of string *s
- * @s: a string.
- * Return: len of string.
- */
-unsigned int _strlen(char *s)
-{
-	unsigned int len = 0;
+#include <string.h>
 
-	while (*(s + len))
-		len++;
-	return (len);
-}
 /**
  * _strcpy - copy string
  * @s: string to copy
@@ -35,37 +24,41 @@ char *_strcpy(char *s, int len)
 	new_s[i] = s[i];
 	return (new_s);
 }
+
+
 /**
-  * new_dog - creates a new dog.
-  *
-  * @name: name.
-  * @age: age.
-  * @owner: owner.
-  * Return: nothing.
-  */
+ * new_dog - entry point
+ * @name: string from main, name of pet
+ * @age: number from main, age of pet
+ * @owner: string from main, owner of pet
+ * Return: p
+ */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *d;
+	dog_t *p;
 	char *cpy_name, *cpy_owner;
 
-	d = malloc(sizeof(dog_t));
-	if (!d)
+	p = malloc(sizeof(dog_t));
+
+	if (p == NULL)
 		return (NULL);
+
 	/* Copy strings */
-	cpy_name = _strcpy(name, _strlen(name));
-	cpy_owner = _strcpy(owner, _strlen(owner));
-	/* If fail someone free and return NULL */
+	cpy_name = _strcpy(name, strlen(name));
+	cpy_owner = _strcpy(owner, strlen(owner));
+
 	if (!cpy_name || !cpy_owner)
-	{	free(d);
+	{	free(p);
 		if (cpy_name)
 			free(cpy_name);
 		if (cpy_owner)
 			free(cpy_owner);
 		return (NULL);
 	}
-	/* Otherwise assing name and owner */
-	d->name = cpy_name;
-	d->age = age;
-	d->owner = cpy_owner;
-	return (d);
+
+	p->name = name;
+	p->age = age;
+	p->owner = owner;
+	return (p);
 }
