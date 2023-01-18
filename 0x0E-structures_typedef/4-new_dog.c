@@ -1,5 +1,30 @@
 #include "dog.h"
 #include <stdlib.h>
+#include <string.h>
+
+/**
+ * _strcpy - copy string
+ * @s: string to copy
+ * @len: len of string to copy
+ * Return: copy string.
+ */
+char *_strcpy(char *s, int len)
+{
+	char *new_s;
+	int i = 0;
+
+	new_s = malloc(sizeof(char) * (len + 1));
+	if (!new_s)
+		return (NULL);
+	while (s[i])
+	{
+		new_s[i] = s[i];
+		i++;
+	}
+	new_s[i] = s[i];
+	return (new_s);
+}
+
 
 /**
  * new_dog - entry point
@@ -8,14 +33,21 @@
  * @owner: string from main, owner of pet
  * Return: p
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *p;
-	/* reserving memory to struct*/
+	char *cpy_name, *cpy_owner;
+
 	p = malloc(sizeof(dog_t));
+
 	if (p == NULL)
 		return (NULL);
-	/* Cpunting name pointer*/
+
+	/* Copy strings */
+	cpy_name = _strcpy(name, strlen(name));
+	cpy_owner = _strcpy(owner, strlen(owner));
+
 	if (name == NULL)
 	{
 		free(p);
@@ -28,6 +60,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(name);
 		return (NULL);
 	}
+
 	p->name = name;
 	p->age = age;
 	p->owner = owner;
