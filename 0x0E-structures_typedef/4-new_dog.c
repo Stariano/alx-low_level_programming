@@ -48,16 +48,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	cpy_name = _strcpy(name, strlen(name));
 	cpy_owner = _strcpy(owner, strlen(owner));
 
-	if (name == NULL)
-	{
-		free(p);
-		free(owner);
-		return (NULL);
-	}
-	if (owner == NULL)
-	{
-		free(p);
-		free(name);
+	if (!cpy_name || !cpy_owner)
+	{	free(p);
+		if (cpy_name)
+			free(cpy_name);
+		if (cpy_owner)
+			free(cpy_owner);
 		return (NULL);
 	}
 
