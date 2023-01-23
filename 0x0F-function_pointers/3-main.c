@@ -24,10 +24,10 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	if (get_op_func(c) == NULL)
+	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
 		printf("Error\n");
-		exit(98);
+		exit(99);
 	}
 
 	if ((*c == '/' && secondnum == 0) || (*c == '%' && secondnum == 0))
