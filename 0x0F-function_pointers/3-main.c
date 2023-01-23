@@ -13,29 +13,29 @@ int main(int argc, char *argv[])
 {
 	int firstnum, secondnum;
 	char *c;
-	
+
 	firstnum = atoi(argv[1]);
 	secondnum = atoi(argv[3]);
 	c = argv[2];
 
 	if (argc != 4)
 	{
-		printf("1 Error\n");
+		printf("Error\n");
 		exit(98);
 	}
 
 	if (get_op_func(c) == NULL)
 	{
-		printf("2 Error\n");
+		printf("Error\n");
 		exit(98);
 	}
 
 	if ((*c == '/' && secondnum == 0) || (*c == '%' && secondnum == 0))
 	{
-		printf("3 Error\n");
+		printf("Error\n");
 		exit(100);
 	}
-	
-	printf("%d\n", get_op_func(c)(firstnum,secondnum));
-	return(0);
-}	
+
+	printf("%d\n", get_op_func(c)(firstnum, secondnum));
+	return (0);
+}
