@@ -14,15 +14,16 @@ int main(int argc, char *argv[])
 	int firstnum, secondnum;
 	char *c;
 
-	firstnum = atoi(argv[1]);
-	secondnum = atoi(argv[3]);
-	c = argv[2];
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
+
+	firstnum = atoi(argv[1]);
+	secondnum = atoi(argv[3]);
+	c = argv[2];
 
 	if (get_op_func(c) == NULL || c[1] != '\0')
 	{
