@@ -24,31 +24,29 @@ int _strlenn(char *s)
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t node;
+	list_t *node;
 	list_t *last = *head;
 
-	node = NULL;
 
 	node = malloc(sizeof(list_t));
-	if (new == NULL)
+	if (node == NULL)
 	{
 		return (NULL);
 	}
 
-	new->str = strdup(str);
-	if (!new->str)
+	node->str = strdup(str);
+	if (!node->str)
 	{
-		free(new);
+		free(node);
 		return (NULL);
 	}
 
-	new->len = _strlenn(new->str);
-	new->next = NULL;
+	node->len = _strlenn(node->str);
+	node->next = NULL;
 
 	if (*head == NULL)
 	{
-		*head = new;
-		return;
+		*head = node;
 	}
 
 	while (last->next != NULL)
