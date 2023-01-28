@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- * _strlenn - Returns the length of the string
+ * _strlenn - Returns the length of the string.
  * @s: The original Stirng
- * Return : Length of the string
+ * Return: Length of the string
  */
 
 int _strlenn(char *s)
