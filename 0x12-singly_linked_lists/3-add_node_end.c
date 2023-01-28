@@ -10,7 +10,8 @@ int _strlenn(char *s)
 {
 	int i;
 
-	for (i = 0; s[i] != '\0'; ++i);
+	for (i = 0; s[i] != '\0'; ++i)
+		;
 	return (i);
 }
 
@@ -27,20 +28,20 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *last = *head;
 
 	node = NULL;
+
 	node = malloc(sizeof(list_t));
-	
 	if (new == NULL)
 	{
 		return (NULL);
 	}
-	
+
 	new->str = strdup(str);
 	if (!new->str)
 	{
 		free(new);
 		return (NULL);
 	}
-	
+
 	new->len = _strlenn(new->str);
 	new->next = NULL;
 
@@ -54,7 +55,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		last = last->next;
 
 	last->next = node;
-	
-	return (node)
+
+	return (node);
 }
 
