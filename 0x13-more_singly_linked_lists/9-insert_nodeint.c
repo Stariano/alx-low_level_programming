@@ -23,11 +23,18 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	new->n = n;
 
-	while (idx > 0)
+	if (idx == 0)
 	{
-		temp = temp->next;
-		if (temp == NULL)
+		new->next = copy;
+		*head = new;
+		return (new);
+	}
+
+	while (idx > 1)
+	{
+		if (temp == NULL || temp->next == NULL)
 			return (NULL);
+		temp = temp->next;
 		idx--;
 	}
 
