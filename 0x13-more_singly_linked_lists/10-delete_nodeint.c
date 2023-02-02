@@ -12,32 +12,22 @@
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *new, *temp = *head;
+	listint_t *temp = *head;
 
-	new = malloc(sizeof(listint_t));
+	if (temp == NULL)
+		return (-1)
 
-	if (new == NULL)
-		return (-1);
-
-	new->n = n;
-
-	if (idx == 0)
-	{
-		new->next = temp;
-		*head = new;
-		return (new);
-	}
-
-	while (idx > 1)
+	while (idx > 0)
 	{
 		if (temp == NULL || temp->next == NULL)
-			return (NULL);
+			return (-1);
 		temp = temp->next;
 		idx--;
 	}
-
-	new->next = temp->next;
-	temp->next = new;
+	*head = temp;
+	free(*head);
+	*head = temp;
+	temp = NULL;
 
 	return (1);
 }
