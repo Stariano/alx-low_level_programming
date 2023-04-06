@@ -50,10 +50,9 @@ int set_pair_only(hash_table_t *ht, const char *key,
  * @key: the key, a string that cannot be empty.
  * @value: the value associated with the key, can be an empty string.
  *
- * Return: 1 on success, 0 on error.
+ * Return: 1
  */
-int hash_table_set(hash_table_t *ht, const char *key, const char *value)
-{
+
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
