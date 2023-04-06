@@ -6,14 +6,6 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	#include "hash_tables.h"
-
-/**
- * hash_table_print - prints key/value pairs in hash table array order.
- * @ht: the hash table.
- */
-void hash_table_print(const hash_table_t *ht)
-{
 	unsigned long int i, count = 0;
 	hash_node_t *node;
 
